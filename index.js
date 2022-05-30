@@ -1,9 +1,7 @@
-// CommonJS module syntax (not ES6)
-const util = require("./utils");
+const { makeAFile } = require("./utils");
+const fs = require("fs");
 
-console.log(util);
-// { a: 100, b: 20, addTwoNumbers: [Function: addTwoNumbers] }
-
-console.log(util.addTwoNumbers(20, 3));
-
-// lesson 1 done
+makeAFile("test.txt", "I made this file using fs in node.js");
+console.log(fs.readdirSync("."));
+console.log(fs.readFileSync("index.js", "utf8"));
+// prints contents of a file

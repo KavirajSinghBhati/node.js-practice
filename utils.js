@@ -1,9 +1,10 @@
-function addTwoNumbers(a, b) {
-  return a + b;
+const fs = require("fs");
+
+function makeAFile(name, content) {
+  fs.writeFileSync(name, content);
+  console.log("File written");
 }
 
-// to export something, we use module.exports
-
-module.exports.a = 100;
-module.exports.b = 20;
-module.exports.addTwoNumbers = addTwoNumbers;
+module.exports = {
+  makeAFile,
+};
