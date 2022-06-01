@@ -1,5 +1,14 @@
-import fs from "fs";
+// import export syntax practice
 
-console.log(fs.readFileSync("es6.mjs", "utf8"));
+// named exports are imported as below
 
-// this will work fine
+import { square, cube } from "./module.mjs";
+import { numberSquareRoot } from "./module.mjs";
+
+// importing default exports
+import addSub from "./module.mjs";
+
+console.log(square(5));
+console.log(cube(5));
+console.log(numberSquareRoot(16));
+console.log(addSub(10, 5));
