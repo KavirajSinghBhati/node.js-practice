@@ -1,14 +1,13 @@
 // import export syntax practice
 
-// named exports are imported as below
+// import all named exports together
 
-import { square, cube } from "./module.mjs";
-import { numberSquareRoot } from "./module.mjs";
+// import * as util from "./module.mjs"
 
-// importing default exports
-import addSub from "./module.mjs";
+import { m2 } from "./module.mjs";
 
-console.log(square(5));
-console.log(cube(5));
-console.log(numberSquareRoot(16));
-console.log(addSub(10, 5));
+console.log(m2.square(5));
+console.log(m2.cube(5));
+console.log(m2.sqrt(16));
+
+// console.log(util);
